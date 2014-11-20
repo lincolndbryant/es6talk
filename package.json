@@ -6,10 +6,11 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "6to5": "^1.12.24",
+    "colors": "^1.0.3",
     "gulp": "^3.8.10",
     "gulp-6to5": "^1.0.2",
     "gulp-concat": "^2.4.2",
-    "gulp-sourcemaps": "^1.2.8",
-    "6to5": "^1.12.24"
+    "gulp-sourcemaps": "^1.2.8"
   }
 }
