@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 gulp.task('src', function() {
     return gulp.src('./src/**/*.js')
         .pipe(sourcemaps.init())
-        .pipe(to5({modules: 'amd', amdModuleIds: true, sourceRoot: 'src/js'}))
+        .pipe(to5({modules: 'amd', amdModuleIds: true}))
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist'))
