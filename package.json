@@ -1,11 +1,15 @@
 {
+  "name": "es6talk",
+  "version": "0.0.0",
+  "authors": [
+    "Lincoln Bryant <lbryant@hubspot.com>"
+  ],
+  "license": "MIT",
   "dependencies": {
     "gulp": "^3.8.10",
     "gulp-6to5": "^1.0.2",
     "gulp-concat": "^2.4.2",
-    "gulp-sourcemaps": "^1.2.8"
-  },
-  "devDependencies": {
+    "gulp-sourcemaps": "^1.2.8",
     "6to5": "^1.12.24"
   }
 }
