@@ -3,10 +3,15 @@ var gulp = require('gulp'),
     to5 = require('gulp-6to5'),
     sourcemaps = require('gulp-sourcemaps');
 
+var es6Config = {
+    modules: 'amd',
+    amdModuleIds: true
+};
+
 gulp.task('src', function() {
     return gulp.src('./src/**/*.js')
         .pipe(sourcemaps.init())
-        .pipe(to5({modules: 'amd', amdModuleIds: true}))
+        .pipe(to5(es6Config))
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist'))
