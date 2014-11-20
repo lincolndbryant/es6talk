@@ -20,7 +20,7 @@ function functionScopeExample() {
   }
   closures.forEach(function(func) { func() })
 }
-functionScopeExample(); // => 2, 2, 2
+functionScopeExample(); // => 3, 3, 3   !!!!
 
 
 // es6's let prevents the problem.  also demonstrating of iteration and lambda function syntax
