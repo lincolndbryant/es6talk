@@ -1,20 +1,12 @@
-import boo from 'lib/foo'
+import boo from 'js/lib/foo'
+import blockScope from 'js/blockScope'
+import classes from 'js/classes'
+import generators from 'js/generators'
 
-class Foo {
-    constructor(name, age) {
-        this.name = name
-        this.age = age
-    }
-
-    bar(baz) {
-
-    }
-
+function onLoad() {
+    console.log(this);
 }
 
-console.log(boo)
-
-var boo = new Foo
-boo.bar()
-
-return boo
+window.addEventListener('load', function() {
+    console.log('loaded', e)
+}, false);
