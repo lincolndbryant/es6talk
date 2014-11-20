@@ -1,17 +1,16 @@
 console.log('classes');
 
+// constructor
 class LogConstructing {
     constructor() {
         console.log(`new ${this.constructor.name}`)
     }
-
-    toString() {
-        return 'boo' + super()
-    }
 }
 
+// multiple inheritance?
 class Collection extends Array, LogConstructing {
 
+    // super()
     toString() {
         return `[[Collection]]<${super()}>`
     }
