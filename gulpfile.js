@@ -4,7 +4,7 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps');
 
 var es6Config = {
-  modules: 'amd',
+  modules: 'system',
   amdModuleIds: true
 };
 
