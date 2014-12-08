@@ -1,20 +1,35 @@
 var gulp = require('gulp'),
-  concat = require('gulp-concat'),
-  to5 = require('gulp-6to5'),
-  sourcemaps = require('gulp-sourcemaps');
+    concat = require('gulp-concat'),
+    traceur = require('gulp-traceur'),
+    watch = require('gulp-watch'),
+    sourcemaps = require('gulp-sourcemaps');
 
-var es6Config = {
-  modules: 'system',
-  amdModuleIds: true
+var traceurConfig = {
+  modules: 'instantiate',
+  moduleName: true,
+  experimental: true,
+  annotations: true,
+  types: true,
+  typed: true,
+  asyncFunctions: true,
 };
 
+var src = "./src/**/**.js";
+
 gulp.task('src', function () {
-  return gulp.src('./src/**/*.js')
+  return gulp.src(src)
     .pipe(sourcemaps.init())
-    .pipe(to5(es6Config))
+    .pipe(traceur(traceurConfig))
     .pipe(concat('app.js'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest("./dist"))
 });
 
 gulp.task('default', ['src']);
+
+gulp.task('watch', function () {
+  gulp.start('src');
+  return watch(src, function (files, cb) {
+    gulp.start('src', cb);
+  });
+});
