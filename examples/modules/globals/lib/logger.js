@@ -1,0 +1,3 @@
+window.logger = {
+  log: function() {}
+};
