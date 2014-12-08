@@ -11,5 +11,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "traceur": "~0.0.78",
+    "traceur-runtime": "~0.0.78",
+    "es6-module-loader": "~0.10.0",
+    "system.js": "~0.10.2"
+  }
 }
