@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.0.3",
+    "es6-module-loader": "^0.10.0",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.4.2",
     "gulp-sourcemaps": "^1.2.8",
