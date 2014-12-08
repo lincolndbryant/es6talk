@@ -35,11 +35,9 @@ function blockScopeExample() {
   // let declared variables are not shared in the environment of closures that reference them
   var closures = [];
   for (let i of [0, 1, 2]) {
-    closures.push(function() {
-      console.log(i);
-    });
+    closures.push(i => console.log(i));
   }
-  closures.forEach( (func) => func() );
+  closures.forEach( func => func() );
 }
 blockScopeExample();   // => 0, 1, 2
 

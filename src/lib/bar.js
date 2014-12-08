@@ -1,1 +1,2 @@
-export default 'bar';
+var bar = 'hello';
+export var bar;

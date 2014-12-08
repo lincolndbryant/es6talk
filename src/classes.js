@@ -9,5 +9,4 @@ class Collection extends Array {
 }
 
 let coll = Collection.from([1, 2, 3]);
-console.log('collection length:', coll.length);
-console.log(coll.toString());
+console.log(coll.toString()); // [[Collection]]<1,2,3>
